@@ -5,6 +5,7 @@
 #include <fstream>
 
 #define PATH "D:/Рабочий стол/ГУАП/4-ыйКурс Часть 2/Диплом/ConfigPetri.txt"
+
 void FindActiveTransistions();
 void PrintActiveTransistions();
 void Manually();
@@ -17,7 +18,6 @@ int cond, tran;
 int Sost[N];
 int ch[N];
 //массив состояний
-
 int mx1[N][M];
 //матрица инцидентности 1
 int mx2[M][N];
@@ -82,6 +82,7 @@ int main(int argc, char** argv) {
         std::cout << "Начальное состояние " << std::endl;
         for (int i = 0; i < cond; i++)
             std::cin >> Sost[i];
+        fout << "Последовательность перемещения фишек\n";
         FindActiveTransistions();
         Manually();
 
